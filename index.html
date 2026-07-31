@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width,initial-scale=1.0">
+
+<title>Sedatur Dukungan</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Arial,
+sans-serif;
+
+background:var(--background);
+
+color:var(--text);
+
+min-height:100vh;
+
+overflow-x:hidden;
+
+}
+
+:root{
+
+--primary:#76cc11;
+
+--accent:#38bdf8;
+
+--background:#050b12;
+
+--surface:#0b1520;
+
+--text:#fff;
+
+--muted:#91a2ae;
+
+--border:rgba(255,255,255,.09);
+
+}
+
+
+/* BACKGROUND */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:420px;
+height:420px;
+
+background:var(--primary);
+
+filter:blur(160px);
+
+opacity:.09;
+
+top:-200px;
+left:-200px;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+width:420px;
+height:420px;
+
+background:var(--accent);
+
+filter:blur(160px);
+
+opacity:.08;
+
+right:-200px;
+bottom:-200px;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+
+/* CONTAINER */
+
+.container{
+
+width:min(1050px,92%);
+
+margin:auto;
+
+}
+
+
+/* TOPBAR */
+
+.topbar{
+
+padding:18px 0 0;
+
+}
+
+.topbar-inner{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:15px;
+
+}
+
+.brand{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+font-size:15px;
+
+font-weight:800;
+
+}
+
+.brand-dot{
+
+width:10px;
+height:10px;
+
+border-radius:50%;
+
+background:var(--primary);
+
+box-shadow:
+0 0 16px var(--primary);
+
+}
+
+.clock{
+
+text-align:right;
+
+}
+
+.clock-time{
+
+font-size:15px;
+
+font-weight:800;
+
+}
+
+.clock-date{
+
+font-size:10px;
+
+color:var(--muted);
+
+margin-top:2px;
+
+}
+
+
+/* TICKER */
+
+.ticker{
+
+margin-top:18px;
+
+overflow:hidden;
+
+border-top:
+1px solid var(--border);
+
+border-bottom:
+1px solid var(--border);
+
+background:
+rgba(255,255,255,.025);
+
+}
+
+.ticker-track{
+
+display:flex;
+
+width:max-content;
+
+animation:
+tickerMove 28s linear infinite;
+
+}
+
+.ticker-content{
+
+display:flex;
+
+white-space:nowrap;
+
+}
+
+.ticker-item{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:9px;
+
+padding:11px 24px;
+
+font-size:12px;
+
+color:var(--muted);
+
+}
+
+.ticker-dot{
+
+width:5px;
+height:5px;
+
+border-radius:50%;
+
+background:var(--primary);
+
+box-shadow:
+0 0 9px var(--primary);
+
+}
+
+@keyframes tickerMove{
+
+from{
+transform:translateX(0);
+}
+
+to{
+transform:translateX(-50%);
+}
+
+}
+
+
+/* HERO */
+
+.hero{
+
+padding:60px 0 35px;
+
+text-align:center;
+
+}
+
+.hero-icon{
+
+width:70px;
+height:70px;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+margin:0 auto 18px;
+
+border-radius:22px;
+
+font-size:34px;
+
+background:
+linear-gradient(
+135deg,
+rgba(118,204,17,.15),
+rgba(56,189,248,.1)
+);
+
+border:
+1px solid var(--border);
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.25);
+
+}
+
+.hero h1{
+
+font-size:
+clamp(34px,7vw,60px);
+
+letter-spacing:-2px;
+
+line-height:1.05;
+
+}
+
+.hero h1 span{
+
+background:
+linear-gradient(
+90deg,
+var(--text),
+var(--primary)
+);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+.hero p{
+
+max-width:620px;
+
+margin:17px auto 0;
+
+font-size:14px;
+
+line-height:1.7;
+
+color:var(--muted);
+
+}
+
+
+/* NAVIGATION */
+
+.support-nav{
+
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:10px;
+
+margin:25px auto 30px;
+
+}
+
+.nav-btn{
+
+border:1px solid var(--border);
+
+background:
+rgba(255,255,255,.045);
+
+color:var(--muted);
+
+border-radius:17px;
+
+padding:17px 12px;
+
+cursor:pointer;
+
+font-size:12px;
+
+font-weight:800;
+
+transition:.25s;
+
+}
+
+.nav-btn-icon{
+
+display:block;
+
+font-size:23px;
+
+margin-bottom:7px;
+
+}
+
+.nav-btn:hover{
+
+transform:translateY(-2px);
+
+}
+
+.nav-btn.active{
+
+background:
+linear-gradient(
+135deg,
+rgba(118,204,17,.17),
+rgba(56,189,248,.08)
+);
+
+border-color:
+rgba(118,204,17,.35);
+
+color:var(--text);
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.2);
+
+}
+
+
+/* PAGE */
+
+.support-page{
+
+display:none;
+
+animation:
+pageIn .3s ease;
+
+}
+
+.support-page.active{
+
+display:block;
+
+}
+
+@keyframes pageIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(12px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+/* MAIN CARD */
+
+.main-card{
+
+padding:30px;
+
+border-radius:27px;
+
+background:
+linear-gradient(
+145deg,
+rgba(255,255,255,.065),
+rgba(255,255,255,.025)
+);
+
+border:
+1px solid var(--border);
+
+box-shadow:
+0 25px 70px rgba(0,0,0,.25);
+
+}
+
+
+/* SUPPORT HERO */
+
+.support-symbol{
+
+font-size:42px;
+
+margin-bottom:15px;
+
+}
+
+.main-card h2{
+
+font-size:27px;
+
+margin-bottom:10px;
+
+}
+
+.main-card>p{
+
+font-size:13px;
+
+line-height:1.75;
+
+color:var(--muted);
+
+}
+
+
+/* BENEFITS */
+
+.benefit-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:10px;
+
+margin-top:25px;
+
+}
+
+.benefit{
+
+padding:16px;
+
+border-radius:17px;
+
+background:
+rgba(255,255,255,.04);
+
+border:
+1px solid var(--border);
+
+}
+
+.benefit-icon{
+
+font-size:23px;
+
+margin-bottom:9px;
+
+}
+
+.benefit strong{
+
+display:block;
+
+font-size:13px;
+
+margin-bottom:5px;
+
+}
+
+.benefit span{
+
+font-size:10px;
+
+line-height:1.5;
+
+color:var(--muted);
+
+}
+
+
+/* ACTION */
+
+.action-card{
+
+margin-top:20px;
+
+padding:20px;
+
+border-radius:20px;
+
+background:
+rgba(118,204,17,.06);
+
+border:
+1px solid rgba(118,204,17,.18);
+
+text-align:center;
+
+}
+
+.action-card h3{
+
+font-size:17px;
+
+margin-bottom:7px;
+
+}
+
+.action-card p{
+
+font-size:12px;
+
+color:var(--muted);
+
+margin-bottom:16px;
+
+}
+
+.action-button{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:13px 20px;
+
+border-radius:13px;
+
+border:0;
+
+background:var(--primary);
+
+color:#071000;
+
+font-weight:900;
+
+font-size:12px;
+
+cursor:pointer;
+
+}
+
+
+/* RATING */
+
+.rating-wrap{
+
+margin-top:5px;
+
+}
+
+.rating-wrap iframe{
+
+display:block;
+
+width:100%;
+
+min-height:650px;
+
+border:0;
+
+border-radius:18px;
+
+background:transparent;
+
+}
+
+
+/* REPORT */
+
+.report-box{
+
+padding:25px;
+
+border-radius:20px;
+
+background:
+rgba(56,189,248,.05);
+
+border:
+1px solid rgba(56,189,248,.15);
+
+}
+
+.report-box h3{
+
+font-size:18px;
+
+margin-bottom:8px;
+
+}
+
+.report-box p{
+
+font-size:12px;
+
+line-height:1.7;
+
+color:var(--muted);
+
+}
+
+
+/* FAQ */
+
+.faq{
+
+margin-top:25px;
+
+border:
+1px solid var(--border);
+
+border-radius:18px;
+
+overflow:hidden;
+
+}
+
+.faq-item{
+
+border-bottom:
+1px solid var(--border);
+
+}
+
+.faq-item:last-child{
+
+border-bottom:0;
+
+}
+
+.faq-question{
+
+width:100%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:15px;
+
+padding:17px;
+
+background:transparent;
+
+border:0;
+
+color:var(--text);
+
+text-align:left;
+
+font-size:13px;
+
+font-weight:800;
+
+cursor:pointer;
+
+}
+
+.faq-plus{
+
+font-size:19px;
+
+color:var(--primary);
+
+}
+
+.faq-answer{
+
+display:none;
+
+padding:
+0 17px 17px;
+
+font-size:12px;
+
+line-height:1.7;
+
+color:var(--muted);
+
+}
+
+.faq-item.open .faq-answer{
+
+display:block;
+
+}
+
+
+/* TAGS */
+
+.tags{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:9px;
+
+margin-top:25px;
+
+}
+
+.tag{
+
+padding:9px 14px;
+
+border-radius:999px;
+
+font-size:10px;
+
+font-weight:800;
+
+background:
+rgba(255,255,255,.045);
+
+border:
+1px solid var(--border);
+
+color:var(--muted);
+
+}
+
+
+/* FOOTER */
+
+footer{
+
+padding:45px 0 30px;
+
+text-align:center;
+
+font-size:11px;
+
+color:var(--muted);
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:650px){
+
+.hero{
+
+padding-top:45px;
+
+}
+
+.support-nav{
+
+gap:7px;
+
+}
+
+.nav-btn{
+
+padding:14px 7px;
+
+}
+
+.nav-btn-icon{
+
+font-size:20px;
+
+}
+
+.nav-btn{
+
+font-size:10px;
+
+}
+
+.main-card{
+
+padding:21px;
+
+border-radius:22px;
+
+}
+
+.benefit-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.rating-wrap iframe{
+
+min-height:700px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+<div class="container">
+
+<div class="topbar-inner">
+
+
+<div class="brand">
+
+<div class="brand-dot"></div>
+
+<span id="brandName">
+Sedatur Dukungan
+</span>
+
+</div>
+
+
+<div class="clock">
+
+<div
+id="clockTime"
+class="clock-time">
+
+00:00:00
+
+</div>
+
+<div
+id="clockDate"
+class="clock-date">
+
+Memuat tanggal...
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- TICKER -->
+
+<div class="ticker">
+
+<div class="ticker-track">
+
+<div
+id="tickerOne"
+class="ticker-content">
+</div>
+
+<div
+id="tickerTwo"
+class="ticker-content">
+</div>
+
+</div>
+
+</div>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="container">
+
+
+<div class="hero-icon">
+💚
+</div>
+
+
+<h1>
+
+Dukung
+
+<span>Sedatur.</span>
+
+</h1>
+
+
+<p id="heroDescription">
+
+Satu tempat untuk memberikan laporan,
+rating, maupun dukungan bagi perkembangan
+Sedatur Rawamangun.
+
+</p>
+
+
+</div>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<main class="container">
+
+
+<nav class="support-nav">
+
+
+<button
+class="nav-btn active"
+data-page="support">
+
+<span class="nav-btn-icon">
+💚
+</span>
+
+Patungan Sedatur
+
+</button>
+
+
+<button
+class="nav-btn"
+data-page="report">
+
+<span class="nav-btn-icon">
+📝
+</span>
+
+Form Laporan
+
+</button>
+
+
+<button
+class="nav-btn"
+data-page="rating">
+
+<span class="nav-btn-icon">
+⭐
+</span>
+
+Rating Web
+
+</button>
+
+
+</nav>
+
+
+
+<!-- =====================
+PATUNGAN
+===================== -->
+
+<section
+id="support"
+class="support-page active">
+
+
+<div class="main-card">
+
+
+<div class="support-symbol">
+💚
+</div>
+
+
+<h2>
+Dukung Sedatur Rawamangun
+</h2>
+
+
+<p>
+
+Dukungan kamu membantu menjaga website
+Sedatur, mengembangkan fitur digital,
+serta mendukung kegiatan Sedatur Rawamangun.
+
+</p>
+
+
+<div class="benefit-grid">
+
+
+<div class="benefit">
+
+<div class="benefit-icon">
+🌱
+</div>
+
+<strong>
+Community Support
+</strong>
+
+<span>
+Mendukung kegiatan dan kebersamaan
+Sedatur.
+</span>
+
+</div>
+
+
+<div class="benefit">
+
+<div class="benefit-icon">
+🌐
+</div>
+
+<strong>
+Digital Development
+</strong>
+
+<span>
+Membantu pengembangan dan maintenance
+website Sedatur.
+</span>
+
+</div>
+
+
+<div class="benefit">
+
+<div class="benefit-icon">
+🎉
+</div>
+
+<strong>
+Kegiatan Sedatur
+</strong>
+
+<span>
+Mendukung kegiatan komunitas Sedatur
+Rawamangun.
+</span>
+
+</div>
+
+
+</div>
+
+
+<div class="action-card">
+
+
+<h3>
+✨ Patungan Sedatur
+</h3>
+
+
+<p>
+Dukungan dapat diberikan melalui
+Sociabuzz.
+</p>
+
+
+<div id="sociabuzz-button">
+
+<script
+src="https://storage.sociabuzz.com/storage/js/main/buttononwebsite/index.min.js">
+</script>
+
+
+<script>
+
+window.addEventListener(
+"load",
+function(){
+
+if(
+typeof sbBoW !== "undefined"
+){
+
+sbBoW.draw(
+"sedatur_rawamangun",
+"UGF0dW5nYW4gU2VkYXR1cg",
+"position-static",
+"#76CC11",
+"#FFFFFF"
+);
+
+}
+
+}
+);
+
+</script>
+
+</div>
+
+
+</div>
+
+
+<div class="tags">
+
+<div class="tag">
+🌱 Community Support
+</div>
+
+<div class="tag">
+🌐 Digital Development
+</div>
+
+<div class="tag">
+🤝 Kebersamaan
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================
+REPORT
+===================== -->
+
+<section
+id="report"
+class="support-page">
+
+
+<div class="main-card">
+
+
+<div class="support-symbol">
+📝
+</div>
+
+
+<h2>
+Form Laporan
+</h2>
+
+
+<p>
+
+Menemukan bug, informasi yang salah,
+atau masalah pada website Sedatur?
+Laporkan kepada kami agar dapat segera
+diperbaiki.
+
+</p>
+
+
+<div class="action-card">
+
+<h3>
+🚀 Laporkan Masalah
+</h3>
+
+<p>
+Gunakan form laporan Sedatur untuk
+mengirimkan informasi secara lengkap.
+</p>
+
+
+<a
+id="reportButton"
+href="#"
+target="_blank"
+class="action-button">
+
+Buka Form Laporan →
+
+</a>
+
+</div>
+
+
+<div class="faq">
+
+
+<div class="faq-item">
+
+<button
+class="faq-question"
+onclick="toggleFAQ(this)">
+
+<span>
+Apa yang bisa dilaporkan?
+</span>
+
+<span class="faq-plus">
++
+</span>
+
+</button>
+
+
+<div class="faq-answer">
+
+Kamu dapat melaporkan bug,
+link yang tidak berfungsi,
+informasi yang salah, atau masalah
+lain yang ditemukan pada website.
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button
+class="faq-question"
+onclick="toggleFAQ(this)">
+
+<span>
+Apakah harus mencantumkan nama?
+</span>
+
+<span class="faq-plus">
++
+</span>
+
+</button>
+
+
+<div class="faq-answer">
+
+Ikuti ketentuan yang tersedia
+di dalam form laporan.
+
+</div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================
+RATING
+===================== -->
+
+<section
+id="rating"
+class="support-page">
+
+
+<div class="main-card">
+
+
+<div class="support-symbol">
+⭐
+</div>
+
+
+<h2>
+Rating Web Sedatur
+</h2>
+
+
+<p>
+
+Bantu kami mengetahui pengalaman kamu
+menggunakan website Sedatur.
+Berikan rating dan masukan agar website
+ini dapat terus dikembangkan.
+
+</p>
+
+
+<div class="rating-wrap">
+
+<iframe
+data-tally-src="https://tally.so/r/ZjL5ya?transparentBackground=1&formEventsForwarding=1"
+loading="lazy"
+title="Rating Web Sedatur">
+
+</iframe>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026
+
+<span id="footerName">
+Sedatur Rawamangun
+</span>
+
+· Dukungan
+
+</footer>
+
+
+
+<script>
+
+/* =====================
+CLOCK
+===================== */
+
+function updateClock(){
+
+const now=new Date();
+
+
+document.getElementById(
+"clockTime"
+).textContent=
+
+now.toLocaleTimeString(
+"id-ID",
+{
+hour:"2-digit",
+minute:"2-digit",
+second:"2-digit"
+}
+);
+
+
+document.getElementById(
+"clockDate"
+).textContent=
+
+now.toLocaleDateString(
+"id-ID",
+{
+weekday:"long",
+day:"numeric",
+month:"long",
+year:"numeric"
+}
+);
+
+}
+
+
+updateClock();
+
+setInterval(
+updateClock,
+1000
+);
+
+
+/* =====================
+NAVIGATION
+===================== */
+
+const buttons=
+document.querySelectorAll(
+".nav-btn"
+);
+
+const pages=
+document.querySelectorAll(
+".support-page"
+);
+
+
+buttons.forEach(
+button=>{
+
+button.addEventListener(
+"click",
+()=>{
+
+const target=
+button.dataset.page;
+
+
+buttons.forEach(
+item=>
+item.classList.remove(
+"active"
+)
+);
+
+
+pages.forEach(
+page=>
+page.classList.remove(
+"active"
+)
+);
+
+
+button.classList.add(
+"active"
+);
+
+
+document.getElementById(
+target
+).classList.add(
+"active"
+);
+
+
+/*
+scroll sedikit ke posisi
+navigasi, bukan scroll panjang
+*/
+
+window.scrollTo({
+
+top:
+document.querySelector(
+".support-nav"
+).offsetTop-20,
+
+behavior:"smooth"
+
+});
+
+}
+
+);
+
+}
+);
+
+
+/* =====================
+FAQ
+===================== */
+
+function toggleFAQ(button){
+
+const item=
+button.parentElement;
+
+
+item.classList.toggle(
+"open"
+);
+
+
+const icon=
+button.querySelector(
+".faq-plus"
+);
+
+
+icon.textContent=
+item.classList.contains(
+"open"
+)
+?
+"−"
+:
+"+";
+
+}
+
+
+/* =====================
+TALLY
+===================== */
+
+const tallyScript=
+document.createElement(
+"script"
+);
+
+tallyScript.src=
+"https://tally.so/widgets/embed.js";
+
+tallyScript.async=true;
+
+document.body.appendChild(
+tallyScript
+);
+
+
+/* =====================
+JSON
+===================== */
+
+fetch("support.json")
+
+.then(
+response=>{
+
+if(!response.ok){
+
+throw new Error(
+"support.json tidak ditemukan"
+);
+
+}
+
+return response.json();
+
+}
+)
+
+.then(
+data=>{
+
+
+/* THEME */
+
+if(data.theme){
+
+const root=
+document.documentElement;
+
+
+Object.entries(
+data.theme
+)
+.forEach(
+([key,value])=>{
+
+root.style.setProperty(
+"--"+key,
+value
+);
+
+}
+);
+
+}
+
+
+/* SITE */
+
+if(data.site){
+
+if(data.site.name){
+
+document.getElementById(
+"brandName"
+).textContent=
+data.site.name;
+
+}
+
+if(data.site.footer){
+
+document.getElementById(
+"footerName"
+).textContent=
+data.site.footer;
+
+}
+
+}
+
+
+/* HERO */
+
+if(
+data.hero &&
+data.hero.description
+){
+
+document.getElementById(
+"heroDescription"
+).textContent=
+data.hero.description;
+
+}
+
+
+/* TICKER */
+
+if(
+Array.isArray(
+data.ticker
+)
+){
+
+const html=
+data.ticker
+.map(
+text=>`
+
+<span class="ticker-item">
+
+<span class="ticker-dot"></span>
+
+${text}
+
+</span>
+
+`
+)
+.join("");
+
+
+document.getElementById(
+"tickerOne"
+).innerHTML=html;
+
+
+document.getElementById(
+"tickerTwo"
+).innerHTML=html;
+
+}
+
+
+/* REPORT */
+
+if(
+data.links &&
+data.links.report
+){
+
+document.getElementById(
+"reportButton"
+).href=
+data.links.report;
+
+}
+
+}
+)
+
+.catch(
+error=>{
+
+console.error(error);
+
+});
+
+
+</script>
+
+
+</body>
+
+  </html>
