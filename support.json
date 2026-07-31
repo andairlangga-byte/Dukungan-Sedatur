@@ -1,0 +1,32 @@
+{
+  "site": {
+    "name": "Sedatur Dukungan",
+    "footer": "Sedatur Rawamangun"
+  },
+
+  "theme": {
+    "primary": "#76cc11",
+    "accent": "#38bdf8",
+    "background": "#050b12",
+    "surface": "#0b1520",
+    "text": "#ffffff",
+    "muted": "#91a2ae",
+    "border": "rgba(255,255,255,.09)"
+  },
+
+  "hero": {
+    "description": "Satu tempat untuk memberikan laporan, rating, maupun dukungan bagi perkembangan Sedatur Rawamangun."
+  },
+
+  "ticker": [
+    "Selamat datang di Dukungan Sedatur",
+    "Ada masalah di website? Laporkan kepada kami.",
+    "Berikan rating untuk membantu pengembangan website Sedatur.",
+    "Dukungan kamu membantu perkembangan Sedatur Rawamangun.",
+    "Terima kasih sudah menjadi bagian dari perjalanan Sedatur 🤝"
+  ],
+
+  "links": {
+    "report": "https://tally.so/r/XXXXXXXX"
+  }
+}
